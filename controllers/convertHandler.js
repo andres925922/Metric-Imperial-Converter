@@ -1,3 +1,12 @@
+// serializar el input en función de un regex
+
+const dataSplitter = (data) => {
+  const number = input.match(/[.\d\/]+/g) || ["1"];
+  const string = input.match(/[a-z][A-Z]+/g)[0];
+
+  return [number[0], string]
+}
+
 function ConvertHandler() {
   
   this.getNum = function(input) {
